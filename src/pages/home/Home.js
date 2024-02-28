@@ -16,9 +16,11 @@ export default function Home() {
   const [isClicked, setClicked] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
 
-  const handleCodeButton = (index) => () => {
+  const handleCodeButton = (index, item) => () => {
     setClicked(true);
     setActiveIndex(index);
+
+    navigator.clipboard.writeText(item.toUpperCase());
   };
 
   return (
@@ -37,15 +39,15 @@ export default function Home() {
                 className={`home-box-button ${
                   activeIndex === index ? "home-box-button-active" : null
                 }`}
-                onClick={handleCodeButton(index)}
+                onClick={handleCodeButton(index, item.name)}
               >
-                Show Code
+                Copy Code
               </button>
 
               {isClicked && activeIndex === index ? (
                 <>
                   <div className="home-code-box animation">
-                    <p>background-color: {item.name.toUpperCase()}</p>
+                    <p>Copied!</p>
                   </div>
                 </>
               ) : null}

@@ -44,19 +44,21 @@
 .home-box-button:hover {
   background-color: #212121;
   color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .home-box-button-active {
   background-color: #212121;
   color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .home-code-box {
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: #121212;
   border-radius: 50px;
-  color: white;
+  border: gray 2px dotted;
   padding: 0 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  font-size: 0.8rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
