@@ -1,13 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Roboto+Slab:wght@400;500;600;700&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Anta", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+code,
+button {
+  font-family: "Anta", sans-serif;
+}
+
+.animation {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.7s 0.2s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

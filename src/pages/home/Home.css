@@ -1,0 +1,44 @@
+.home-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 3rem 3rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.home-box {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-color-box {
+  width: 200px;
+  background-color: #0ba360;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.home-box-button {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  padding: 13px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e4e4e5;
+  transition: 0.4s all ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.home-box-button:hover {
+  background-color: #212121;
+  color: white;
+}
