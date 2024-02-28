@@ -17,8 +17,6 @@ export default function Navbar() {
     else navigate(item.toLowerCase());
   };
 
-  useEffect(() => {}, [location.pathname]);
-
   return (
     <>
       <div className="navbar-container animation">
