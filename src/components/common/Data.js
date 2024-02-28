@@ -19,6 +19,11 @@ const buttonData = [
     name: "#cdb7f6",
     tag: "pastel",
   },
+  {
+    id: 4,
+    name: "#A7C7E7",
+    tag: "pastel",
+  },
 ];
 
 export { buttonData };

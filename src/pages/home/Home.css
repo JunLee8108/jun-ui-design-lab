@@ -1,5 +1,6 @@
 .home-container {
   max-width: 1200px;
+  padding: 15px 0;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -7,6 +8,7 @@
   justify-content: center;
   align-items: center;
   align-content: center;
+  margin-bottom: 40px;
 }
 
 .home-box {
@@ -17,6 +19,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .home-color-box {
@@ -27,8 +30,8 @@
 }
 
 .home-box-button {
-  margin-top: 25px;
-  margin-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   padding: 13px 15px;
   border: none;
   border-radius: 10px;
@@ -41,4 +44,19 @@
 .home-box-button:hover {
   background-color: #212121;
   color: white;
+}
+
+.home-box-button-active {
+  background-color: #212121;
+  color: white;
+}
+
+.home-code-box {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #121212;
+  border-radius: 50px;
+  color: white;
+  padding: 0 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
 }
