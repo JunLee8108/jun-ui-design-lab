@@ -1,8 +1,8 @@
-import { useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 import { useState, useEffect } from "react";
 
+import { useLocation, useNavigate } from "react-router-dom";
 import { PacmanLoader } from "react-spinners";
 
 const topButtons = ["Color", "Button", "Animation"];
@@ -19,7 +19,15 @@ export default function Navbar() {
     else navigate(item.toLowerCase());
   };
 
-  useEffect(() => {}, [location.pathname]);
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setActiveButton(0);
+    } else if (location.pathname === "/button") {
+      setActiveButton(1);
+    } else if (location.pathname === "/animation") {
+      setActiveButton(2);
+    }
+  }, [location.pathname]);
 
   return (
     <>

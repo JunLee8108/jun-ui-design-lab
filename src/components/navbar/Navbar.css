@@ -17,15 +17,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 20px 0; */
   margin-bottom: 40px;
   gap: 4rem;
-  /* background-color: red; */
-  /* background-color: red; */
 }
 
 .navbar-pacman-container p {
-  /* color: orange; */
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
