@@ -27,13 +27,14 @@
 }
 
 .home-box-tag {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .home-box-tag-span {
   padding: 5px 10px;
   background-color: #212121;
   color: white;
+  font-size: 0.9rem;
   border-radius: 50px;
 }
 
