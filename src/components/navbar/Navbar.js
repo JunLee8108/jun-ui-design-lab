@@ -26,6 +26,10 @@ export default function Navbar() {
       <div className="navbar-container animation">
         <h1 className="navbar-title">Jun's UI Design Lab</h1>
 
+        <div className="navbar-pacman-container">
+          <PacmanLoader color="orange" /> <p>Growing up..</p>
+        </div>
+
         <div className="navbar-top-button-container">
           {topButtons.map((item, index) => {
             return (
@@ -40,10 +44,6 @@ export default function Navbar() {
               </button>
             );
           })}
-        </div>
-
-        <div className="navbar-pacman-container">
-          <PacmanLoader color="orange" /> <p>Growing up..</p>
         </div>
       </div>
     </>
