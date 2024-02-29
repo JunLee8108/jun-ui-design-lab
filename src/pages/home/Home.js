@@ -29,7 +29,7 @@ export default function Home() {
         {buttonData.map((item, index) => {
           return (
             <div className="home-box" key={index}>
-              <h2>{item.name.toUpperCase()}</h2>
+              <h2 className="home-box-name">{item.name.toUpperCase()}</h2>
 
               <DynamicBgColor bg={item.name} />
 

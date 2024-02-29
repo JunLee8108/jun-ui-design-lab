@@ -3,6 +3,8 @@ import "./Navbar.css";
 
 import { useState, useEffect } from "react";
 
+import { PacmanLoader } from "react-spinners";
+
 const topButtons = ["Color", "Button", "Animation"];
 
 export default function Navbar() {
@@ -38,6 +40,10 @@ export default function Navbar() {
               </button>
             );
           })}
+        </div>
+
+        <div className="navbar-pacman-container">
+          <PacmanLoader color="orange" /> <p>Growing up..</p>
         </div>
       </div>
     </>
