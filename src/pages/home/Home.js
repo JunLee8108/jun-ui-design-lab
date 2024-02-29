@@ -23,6 +23,11 @@ export default function Home() {
     navigator.clipboard.writeText(item.toUpperCase());
   };
 
+  const handleCodeBoxClose = () => {
+    setClicked(false);
+    setActiveIndex(-1);
+  };
+
   return (
     <>
       <div className="home-container animation">
@@ -33,7 +38,9 @@ export default function Home() {
 
               <DynamicBgColor bg={item.name} />
 
-              <p>Tag: {item.tag}</p>
+              <p className="home-box-tag">
+                Tag: <span className="home-box-tag-span">{item.tag}</span>
+              </p>
 
               <button
                 className={`home-box-button ${
@@ -46,9 +53,15 @@ export default function Home() {
 
               {isClicked && activeIndex === index ? (
                 <>
-                  <div className="home-code-box animation">
-                    <p>Copied!</p>
+                  <div className="home-code-box animation2">
+                    <p>✅ Copied!</p>
                   </div>
+                  <button
+                    className="home-code-box-close animation2"
+                    onClick={handleCodeBoxClose}
+                  >
+                    X
+                  </button>
                 </>
               ) : null}
             </div>
