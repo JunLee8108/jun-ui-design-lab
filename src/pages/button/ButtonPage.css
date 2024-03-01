@@ -1,0 +1,42 @@
+.button-page-box-container {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.button-page-box-content-button {
+  padding: 20px;
+  border: none;
+  border-radius: 50px;
+  background-color: #3cba92;
+  color: white;
+  font-weight: 600;
+  transition: 0.4s all ease;
+  cursor: pointer;
+}
+
+.button-page-box-content-button:hover {
+  border-radius: 0px;
+  background-color: #0ba360;
+}
+
+.button-page-box-show-button {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e4e4e5;
+  transition: 0.4s all ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.button-page-box-show-button:hover {
+  background-color: #212121;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}

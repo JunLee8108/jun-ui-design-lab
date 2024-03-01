@@ -1,4 +1,4 @@
-const buttonData = [
+const colorData = [
   {
     id: 5,
     name: "#ff2014",
@@ -31,4 +31,38 @@ const buttonData = [
   },
 ];
 
-export { buttonData };
+const buttonData = [
+  {
+    id: 0,
+    border: "none",
+    borderRadius: "50px",
+    background: "#3cba92",
+    color: "white",
+    fontWeight: "600",
+    hoverBorderRadius: "0px",
+    hoverBackground: "#0ba360",
+  },
+  {
+    id: 1,
+    border: "none",
+    borderRadius: "10px",
+    background: "#CDB7F6",
+    color: "white",
+    fontWeight: "600",
+    hoverBorderRadius: "10px",
+    hoverBackground: "#8C65D3",
+    hoverTransform: "translateY(-10px)",
+  },
+  {
+    id: 0,
+    border: "none",
+    borderRadius: "50px",
+    background: "#3cba92",
+    color: "white",
+    fontWeight: "600",
+    hoverBorderRadius: "0px",
+    hoverBackground: "#0ba360",
+  },
+];
+
+export { colorData, buttonData };

@@ -1,5 +1,5 @@
 import "./Home.css";
-import { buttonData } from "../../components/common/Data";
+import { colorData } from "../../components/common/Data";
 
 import { useState } from "react";
 
@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <>
       <div className="home-container animation">
-        {buttonData.map((item, index) => {
+        {colorData.map((item, index) => {
           return (
             <div className="home-box" key={index}>
               <h2 className="home-box-name">{item.name.toUpperCase()}</h2>
