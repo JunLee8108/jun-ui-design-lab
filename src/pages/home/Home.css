@@ -78,14 +78,14 @@
 .home-code-box-close {
   border: none;
   color: red;
-  padding: 8px 12px;
+  padding: 13px;
   margin-top: 10px;
   background-color: transparent;
   border-radius: 50px;
   cursor: pointer;
   font-weight: bold;
   transition: 0.4s all ease;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 .home-code-box-close:hover {

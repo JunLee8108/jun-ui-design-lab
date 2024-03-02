@@ -1,7 +1,10 @@
 import "./ButtonPage.css";
 import { buttonData } from "../../components/common/Data";
 
+import { useState } from "react";
+
 import styled from "styled-components";
+import { Editor } from "@monaco-editor/react";
 
 let Buttons = styled.button`
   padding: 20px;
@@ -16,7 +19,7 @@ let Buttons = styled.button`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
   &:hover {
-    border-radius: ${(props) => props.hoverborderradius};
+    border-radius: ${(props) => props.hoverborderradius || "none"};
     background-color: ${(props) => props.hoverbackground};
     transform: ${(props) => props.hovertransform || "none"};
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
@@ -24,6 +27,19 @@ let Buttons = styled.button`
 `;
 
 export default function ButtonPage() {
+  const [isClicked, setClicked] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(-1);
+
+  const handleCodeButton = (index) => () => {
+    setClicked(true);
+    setActiveIndex(index);
+  };
+
+  const handleCloseBtn = () => {
+    setClicked(false);
+    setActiveIndex(-1);
+  };
+
   return (
     <>
       <div className="button-page-container animation">
@@ -46,14 +62,67 @@ export default function ButtonPage() {
               </div>
 
               <button
-                className="button-page-box-show-button"
-                // className={`home-box-button ${
-                //   activeIndex === index ? "home-box-button-active" : null
-                // }`}
-                // onClick={handleCodeButton(index, item.name)}
+                className={`button-page-box-show-button ${
+                  activeIndex === index
+                    ? "button-page-box-show-button-active"
+                    : null
+                }`}
+                onClick={handleCodeButton(index)}
               >
                 Show Code
               </button>
+
+              {isClicked && activeIndex === index ? (
+                <>
+                  <br />
+
+                  <Editor
+                    height="100px"
+                    language="html"
+                    theme="vs-dark"
+                    value={`<!--HTML-->  \n<button>Buttons</button>`}
+                    options={{
+                      fontSize: "13px",
+                      minimap: { enabled: false },
+                    }}
+                    className="animation"
+                  />
+
+                  <br />
+
+                  <Editor
+                    height="350px"
+                    language="css"
+                    theme="vs-dark"
+                    value={`/* CSS */ \n button {\n padding: 20px; \n transition: 0.4s all ease; \n cursor: pointer; \n border: none; \n border-radius: ${
+                      item.borderradius
+                    }; \n background-color: ${item.background}; \n color: ${
+                      item.color
+                    }; \n font-weight: ${
+                      item.fontWeight
+                    };\n} \n\nbutton:hover {\n background-color: ${
+                      item.hoverbackground
+                    }; \n ${
+                      item.hoverborderradius
+                        ? `border-radius: ${item.hoverborderradius};`
+                        : ""
+                    }${
+                      item.hovertransform
+                        ? `transform: ${item.hovertransform};`
+                        : ""
+                    }\n}`}
+                    options={{ fontSize: "13px", minimap: { enabled: false } }}
+                    className="animation"
+                  />
+
+                  <button
+                    className="button-page-code-editor-close"
+                    onClick={handleCloseBtn}
+                  >
+                    CLOSE
+                  </button>
+                </>
+              ) : null}
             </div>
           );
         })}

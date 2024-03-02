@@ -53,14 +53,14 @@ export default function Home() {
 
               {isClicked && activeIndex === index ? (
                 <>
-                  <div className="home-code-box animation2">
+                  <div className="home-code-box animation">
                     <p>✅ Copied!</p>
                   </div>
                   <button
-                    className="home-code-box-close animation2"
+                    className="home-code-box-close animation"
                     onClick={handleCodeBoxClose}
                   >
-                    X
+                    CLOSE
                   </button>
                 </>
               ) : null}

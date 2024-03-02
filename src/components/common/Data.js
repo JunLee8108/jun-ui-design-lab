@@ -64,6 +64,7 @@ const buttonData = [
     background: "#3cba92",
     color: "white",
     fontWeight: "600",
+
     hoverborderradius: "0px",
     hoverbackground: "#0ba360",
   },
@@ -74,7 +75,7 @@ const buttonData = [
     background: "#CDB7F6",
     color: "white",
     fontWeight: "600",
-    hoverborderradius: "10px",
+
     hoverbackground: "#8C65D3",
     hovertransform: "translateY(-10px)",
   },
@@ -85,6 +86,7 @@ const buttonData = [
     background: "#3cba92",
     color: "white",
     fontWeight: "600",
+
     hoverborderradius: "0px",
     hoverbackground: "#0ba360",
   },

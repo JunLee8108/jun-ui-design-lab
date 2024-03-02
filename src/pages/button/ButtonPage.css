@@ -7,22 +7,6 @@
   border-radius: 10px;
 }
 
-.button-page-box-content-button {
-  padding: 20px;
-  border: none;
-  border-radius: 50px;
-  background-color: #3cba92;
-  color: white;
-  font-weight: 600;
-  transition: 0.4s all ease;
-  cursor: pointer;
-}
-
-.button-page-box-content-button:hover {
-  border-radius: 0px;
-  background-color: #0ba360;
-}
-
 .button-page-box-show-button {
   margin-top: 15px;
   margin-bottom: 20px;
@@ -39,4 +23,26 @@
   background-color: #212121;
   color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.button-page-box-show-button-active {
+  background-color: #212121;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.button-page-code-editor-close {
+  margin-top: 20px;
+  padding: 15px;
+  border: none;
+  background-color: transparent;
+  color: red;
+  font-weight: bold;
+  transition: 0.4s ease all;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.button-page-code-editor-close:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
