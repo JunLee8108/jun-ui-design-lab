@@ -10,13 +10,13 @@ let Buttons = styled.button`
   padding: 20px;
   transition: 0.4s all ease;
   cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
   border: ${(props) => props.border};
   border-radius: ${(props) => props.borderradius};
   background-color: ${(props) => props.background};
   color: ${(props) => props.color};
   font-weight: ${(props) => props.fontWeight};
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
   &:hover {
     border-radius: ${(props) => props.hoverborderradius || "none"};
@@ -85,7 +85,7 @@ export default function ButtonPage() {
                       fontSize: "13px",
                       minimap: { enabled: false },
                     }}
-                    className="animation"
+                    className="animation-slow"
                   />
 
                   <br />
@@ -94,13 +94,13 @@ export default function ButtonPage() {
                     height="350px"
                     language="css"
                     theme="vs-dark"
-                    value={`/* CSS */ \n button {\n padding: 20px; \n transition: 0.4s all ease; \n cursor: pointer; \n border: none; \n border-radius: ${
+                    value={`/* CSS */ \nbutton {\n padding: 20px; \n transition: 0.4s all ease; \n cursor: pointer; \n border: none; \n box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); \n border-radius: ${
                       item.borderradius
                     }; \n background-color: ${item.background}; \n color: ${
                       item.color
                     }; \n font-weight: ${
                       item.fontWeight
-                    };\n} \n\nbutton:hover {\n background-color: ${
+                    };\n} \n\nbutton:hover {\n box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); \n background-color: ${
                       item.hoverbackground
                     }; \n ${
                       item.hoverborderradius
@@ -112,7 +112,7 @@ export default function ButtonPage() {
                         : ""
                     }\n}`}
                     options={{ fontSize: "13px", minimap: { enabled: false } }}
-                    className="animation"
+                    className="animation-slow"
                   />
 
                   <button
