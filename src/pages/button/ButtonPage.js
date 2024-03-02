@@ -85,7 +85,7 @@ export default function ButtonPage() {
                       fontSize: "13px",
                       minimap: { enabled: false },
                     }}
-                    className="animation-slow"
+                    className="animation"
                   />
 
                   <br />
@@ -112,7 +112,7 @@ export default function ButtonPage() {
                         : ""
                     }\n}`}
                     options={{ fontSize: "13px", minimap: { enabled: false } }}
-                    className="animation-slow"
+                    className="animation"
                   />
 
                   <button
